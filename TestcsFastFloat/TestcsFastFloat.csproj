@@ -81,6 +81,9 @@
       <ParentExtension>$(ProjectExt.Replace('proj', ''))</ParentExtension>
       <DependentUpon>BasicTests.cs</DependentUpon>
     </None>
+    <None Update="volume\canada.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="data_files\freetype-2-7.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

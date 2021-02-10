@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 
 namespace csFastFloat
 {
-  public sealed class FloatBinaryConstants
+  public static class FloatBinaryConstants
   {
     public const int mantissa_explicit_bits= 23;
 
@@ -38,36 +38,5 @@ namespace csFastFloat
     public const float NegativeInfinity = float.NegativeInfinity;
 
 
- //  public float exact_power_of_ten(long power) => Constants.powers_of_ten_float[power];
-
-    //public float ToFloat(bool negative, AdjustedMantissa am)
-    //{
-    //  float f;
-    //  ulong word = am.mantissa;
-    //  word |= (ulong)(am.power2) << mantissa_explicit_bits;
-    //  word = negative ? word | ((ulong)(1) << sign_index) : word;
-
-    //  unsafe
-    //  {
-    //    Buffer.MemoryCopy(&word, &f, sizeof(float), sizeof(float));
-    //  }
-
-    //  return f;
-    //}
-
-    //float IBinaryFormat<float>.FastPath(ParsedNumberString pns)
-    //{
-    //  float value = (float)pns.mantissa;
-    //  if (pns.exponent < 0)
-    //  {
-    //    value = value / exact_power_of_ten(-pns.exponent);
-    //  }
-    //  else
-    //  {
-    //    value = value * exact_power_of_ten(pns.exponent);
-    //  }
-    //  if (pns.negative) { value = -value; }
-    //  return value;
-    //}
   }
 }

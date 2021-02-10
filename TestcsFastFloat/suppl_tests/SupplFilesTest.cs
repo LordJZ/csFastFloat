@@ -38,6 +38,33 @@ namespace TestcsFastFloat.Tests.ff_suppl_tests
       }
     }
 
+
+
+    [Fact()]
+    private unsafe void Canada_txt()
+    {
+      //string pathValidation = args[0] ?? throw new ArgumentNullException("Search path");
+
+      string fileName = @".\volume\canada.txt";
+      var lines = System.IO.File.ReadAllLines(fileName);
+
+      foreach (string l in lines)
+      {
+        fixed (char* p = l)
+        { 
+          FastDoubleParser.ParseDouble(p, p+ l.Length);
+        
+        
+        }
+
+
+             
+      }
+
+    }
+
+
+
     /// <summary>
     /// Check every line of the file which are required to be the following format
     /// 0000 00000000 0000000000000000 0e3

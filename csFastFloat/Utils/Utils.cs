@@ -25,8 +25,10 @@ namespace csFastFloat
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     internal static bool is_integer(char c) => c >= '0' && c <= '9';
 
-  
-   
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    internal static bool is_integer2(char c) => (uint)(c - '0') <= '9' - '0';
+
+
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     internal static value128 compute_product_approximation(int bitPrecision, long q, ulong w)
